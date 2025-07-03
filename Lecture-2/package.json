@@ -1,0 +1,12 @@
+{
+  "name": "lec_2",
+  "version": "1.0.0",
+  "description": "hi",
+  "license": "ISC",
+  "author": "parmeet",
+  
+  "main": "index.js",
+  "scripts": {
+    "test": "run"
+  }
+}
