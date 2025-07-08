@@ -1,0 +1,17 @@
+{
+  "name": "exportingmypackage",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "exportingmypackage": "^1.0.2",
+    "parmeet": "^1.0.0"
+  }
+}
