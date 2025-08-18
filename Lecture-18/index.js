@@ -126,28 +126,31 @@ app.delete("/blogs/:blogId", async (req, res) => {
 
 
 //update
-app.put("/blogs/:id", async (req, res) => {
-    let {id} = req.params;
-    let {userId} = req.body;
-    let {title, body} = req.body;
-    let blogExist = await Blogs.findById(id);
-    if (!blogExist) return res.json({
-        success: false,
-        message: "Blog does not exist"
-    });
-    if(blogExist.userId != userId) return res.json({
-        success: false,
-        message: "You are not allowed to update this blog"
-    })
-    blogExist.title = title;
-    blogExist.body = body;
-    await blogExist.save();
+app.put("/blogs/:blogId/:userId", async (req, res)=>{
+    let{blogId, userId}=req.params;
+    let{title, body}=req.body;
+
+    let blogExist=await Blogs.findById(blogId);
+    if(!blogExist){
+       return res.json({
+            success:false,
+            message:"Blog does not exist"
+        })
+    }
+      if(blogExist.userId!=userId){
+        return res.json({
+            success:false,
+            message:"You are not allowed to edit this blog"
+        })
+    }
+  let updatedBlog=  await Blogs.findByIdAndUpdate(blogId, { title, body}, {new:true});
     res.json({
-        success: true,
-        message: "Blog updated successfully",
-        data: blogExist
-    });
-});
+        success:true,
+        message:"Blog edited successfully",
+        data:updatedBlog
+    })
+
+})
 
 
 
