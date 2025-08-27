@@ -146,7 +146,7 @@ app.delete("/blogs/:blogId",isLogin, async (req, res) => {
 
 
 //update
-app.put("/blogs/:blogId/:userId", async (req, res)=>{
+app.put("/blogs/:blogId/:userId", isLogin, async (req, res)=>{
     let{blogId, userId}=req.params;
     let{title, body}=req.body;
 
