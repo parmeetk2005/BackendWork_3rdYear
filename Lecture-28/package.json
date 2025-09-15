@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parmeetk2005/BackendWork_3rdYear.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/parmeetk2005/BackendWork_3rdYear/issues"
+  },
+  "homepage": "https://github.com/parmeetk2005/BackendWork_3rdYear#readme",
+  "dependencies": {
+    "@prisma/client": "^6.16.1",
+    "prisma": "^6.16.1"
+  }
+}
