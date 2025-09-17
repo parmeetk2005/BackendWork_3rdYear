@@ -26,6 +26,6 @@ model Tweet{
   id        Int      @id @default(autoincrement())
   content   String?
   userId    Int
-  user      User     @relation(fields: [userId], references: [id])    // in fields we put foreign key and references is the primary key of the related model
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)   // in fields we put foreign key and references is the primary key of the related model
 }
 
