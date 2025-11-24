@@ -47,4 +47,5 @@ git checkout main
 
 
 * branching *
- 
+ meaningful name like if we want to make feature then feature/<name>
+ if fixing the bug then bug/<name>
