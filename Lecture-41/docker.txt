@@ -1,0 +1,32 @@
+docker: is a tool which packs our application in a container which is independent and that container/docker has everything to run that application
+    image vs container: container is running instance image is the blueprint of the container
+    container is formed after running the image
+JARGON:
+    docker engine: software 
+    docker cli: 
+    docker registry: images stored (registry is like github repo)
+
+
+
+
+DOCKER COMMANDS
+    docker images
+    docker pull <image-name> (to download id not in local system)
+    docker run <image-name> 
+        -> use flags
+            => -d (-detach -> to run container in detach form like process is running in background and in same time we can use terminal)
+            => -p (port mapping)
+            => docker ps (list all container which are currently running)
+            => docker kill <container id> (to kill the container)
+            => --name <name> (to give the name to the container i gave name pk_mongodb)
+            => docker exec -it <container name/ container id> (like docker exec -it pk_mongodb ./bin/bash)
+
+
+to create image :
+    docker build -t <image-name>:<tags>
+
+image size will be too large and we will be aksed to reduce the image size
+    (1) reduce size of node moldules
+    (2) remove dependencies in package.json
+    (3) change the image from latest to smallest size one
+    [build everytime u change the file]
